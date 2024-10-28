@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static 'styles/style.css'%}">
+</head>
+<body>
+    <h1>I-SUS</h1>
+    <h2>Sistema de mediação das DSEIS</h2>
+    <p>dados</p>
+
+    {% for produto in produtos %}
+        <p><a href="{% url 'produto' produto.id %}">dados</a></p>
+    {% endfor %}
+
+    <img src="{% static 'images/caneca.jpg'%}">
+    <button onclick="teste()">Clique</button>
+
+    <script src="{% static 'js/script.js'%}"></script>
+
+</body>
+</html>
